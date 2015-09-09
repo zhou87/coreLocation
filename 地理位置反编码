@@ -1,0 +1,10 @@
+CLLocation *location = [[CLLocation alloc] initWithLatitude:mylocation.coordinate.latitude longitude:mylocation.coordinate.longitude];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error);
+        }
+        else {
+            NSLog(@"%@",placemarks);
+        }
+    }];
+地理位置反编码[3965:129035] Error Domain=kCLErrorDomain Code=2 "The operation couldn’t be completed. (kCLErrorDomain error 2.)"
